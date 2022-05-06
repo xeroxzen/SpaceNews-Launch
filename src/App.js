@@ -12,13 +12,6 @@ function App() {
       <header>
         <Header />
       </header>
-      {/* <main>
-        <Routes>
-          <Route path="/" element={<Articles />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/reports" element={<Reports />} />
-        </Routes>
-      </main> */}
     </React.Fragment>
   );
 }
