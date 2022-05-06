@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import Reports from "./components/Reports";
 import Articles from "./components/Articles";
 import Blogs from "./components/Blogs";
-import "./App.css";
 
 function App() {
   return (
