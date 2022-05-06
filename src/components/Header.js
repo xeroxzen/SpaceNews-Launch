@@ -10,7 +10,8 @@ const Header = () => {
 
   return (
     <AppBar
-      position="fixed"
+      position="sticky"
+      component="nav"
       sx={{
         background:
           "background: radial-gradient(circle, rgba(0,194,255,1) 0%, rgba(215,8,49,1) 100%);",
@@ -20,9 +21,9 @@ const Header = () => {
         <Typography variant="h4">Space News</Typography>
         <Box display="flex" marginLeft="auto" marginRight="auto">
           <Tabs textColor="inherit" value={value} onChange={handleChange}>
-            <Tab label="News" component={Link} to="/news" />
-            <Tab label="Blogs" component={Link} to="/blogs" />
-            <Tab label="Reports" component={Link} to="/reports" />
+            <Tab label="News" LinkComponent={Link} to="/" />
+            <Tab label="Blog" LinkComponent={Link} to="/blog" />
+            <Tab label="Reports" LinkComponent={Link} to="/reports" />
           </Tabs>
         </Box>
       </Toolbar>

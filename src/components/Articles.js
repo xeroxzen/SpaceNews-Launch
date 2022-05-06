@@ -11,7 +11,7 @@ const Articles = () => {
         "https://api.spaceflightnewsapi.net/v3/articles"
       );
       console.log(res);
-      setArticles(res.data.articles);
+      setArticles(res.data);
     };
     getArticles();
   }, []);
@@ -23,10 +23,10 @@ const Articles = () => {
           <Article
             key={index}
             title={article.title}
-            description={article.summary}
-            author={article.newsSite}
+            summary={article.summary}
+            newsSite={article.newsSite}
             url={article.url}
-            urlToImage={article.imageUrl}
+            imageUrl={article.imageUrl}
           />
         ))}
     </div>
