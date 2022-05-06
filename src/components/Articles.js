@@ -26,7 +26,7 @@ const Articles = () => {
               flexGrow: 1,
             }}
           >
-            <Grid container spacing={2}>
+            <Grid spacing={2}>
               <Grid item sm={12} md={8} xs={4}>
                 <Article
                   key={index}

@@ -12,7 +12,7 @@ const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
     <div>
       <Card
         sx={{
-          width: "328px",
+          width: "88%", //765 laptop screen
           margin: "auto",
           background: "#000000BF",
           color: "#fff",
@@ -68,7 +68,6 @@ const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
               day: "numeric",
               year: "numeric",
             })}
-            
           </Typography>
           <br />
           <Typography
