@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import Reports from "./components/Reports";
 import Articles from "./components/Articles";
-import Blog from "./components/Blog";
+import Blogs from "./components/Blogs";
 import "./App.css";
 
 function App() {
@@ -15,10 +15,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Articles />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog" element={<Blogs />} />
           <Route path="/reports" element={<Reports />} />
         </Routes>
-        
       </main>
     </React.Fragment>
   );
