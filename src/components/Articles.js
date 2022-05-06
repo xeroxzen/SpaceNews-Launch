@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Article from "../components/Article";
+import { Box, Grid } from "@mui/material";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -20,14 +21,25 @@ const Articles = () => {
     <div>
       {articles &&
         articles.map((article, index) => (
-          <Article
-            key={index}
-            title={article.title}
-            summary={article.summary}
-            newsSite={article.newsSite}
-            url={article.url}
-            imageUrl={article.imageUrl}
-          />
+          <Box
+            sx={{
+              flexGrow: 1,
+            }}
+          >
+            <Grid container spacing={2}>
+              <Grid item sm={12} md={8} xs={4}>
+                <Article
+                  key={index}
+                  title={article.title}
+                  summary={article.summary}
+                  newsSite={article.newsSite}
+                  url={article.url}
+                  imageUrl={article.imageUrl}
+                  publishedAt={article.publishedAt}
+                />
+              </Grid>
+            </Grid>
+          </Box>
         ))}
     </div>
   );

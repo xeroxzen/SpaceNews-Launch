@@ -13,14 +13,20 @@ const Header = () => {
       position="sticky"
       component="nav"
       sx={{
-        background:
-          "background: radial-gradient(circle, rgba(0,194,255,1) 0%, rgba(215,8,49,1) 100%);",
+        background: "#000000E6",
       }}
     >
       <Toolbar>
-        <Typography variant="h4">Space News</Typography>
+        <Typography sx={{ color: "#0073B1" }} variant="h5">
+          Space News
+        </Typography>
         <Box display="flex" marginLeft="auto" marginRight="auto">
-          <Tabs textColor="inherit" value={value} onChange={handleChange}>
+          <Tabs
+            sx={{ color: "#0073B1" }}
+            textColor="inherit"
+            value={value}
+            onChange={handleChange}
+          >
             <Tab label="News" LinkComponent={Link} to="/" />
             <Tab label="Blog" LinkComponent={Link} to="/blogs" />
             <Tab label="Reports" LinkComponent={Link} to="/reports" />
