@@ -15,8 +15,8 @@ const Article = ({ title, newsSite, summary, url, imageUrl }) => {
         sx={{
           width: "40%",
           margin: "auto",
-          background:
-            "linear-gradient(0deg, rgba(4,82,115,1) 0%, rgba(6,67,97,1) 32%, rgba(180,27,240,1) 100%);",
+          background: "#293138",
+          color: "#fff",
           borderRadius: "10px",
           boxShadow: "5px 5px 10px #ccc",
           ":hover:": {
@@ -28,7 +28,7 @@ const Article = ({ title, newsSite, summary, url, imageUrl }) => {
         }}
       >
         <CardHeader
-          sx={{ textDecoration: "none", color: "white" }}
+          sx={{ textDecoration: "none", color: "#fff" }}
           component="a"
           variant="title"
           href={url}
@@ -44,7 +44,7 @@ const Article = ({ title, newsSite, summary, url, imageUrl }) => {
           <hr />
           <br />
           <Typography
-            sx={{ textAlign: "left", color: "white", fontSize: "1.2rem" }}
+            sx={{ textAlign: "left", color: "#fff", fontSize: "1.2rem" }}
             variant="subtitle1"
             color="textSecondary"
             component="p"
@@ -53,7 +53,7 @@ const Article = ({ title, newsSite, summary, url, imageUrl }) => {
           </Typography>
           <br />
           <Typography
-            sx={{ textAlign: "left" }}
+            sx={{ textAlign: "left", color: "#fff" }}
             variant="body2"
             color="textSecondary"
             component="p"
