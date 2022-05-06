@@ -22,7 +22,7 @@ const Header = () => {
         <Box display="flex" marginLeft="auto" marginRight="auto">
           <Tabs textColor="inherit" value={value} onChange={handleChange}>
             <Tab label="News" LinkComponent={Link} to="/" />
-            <Tab label="Blog" LinkComponent={Link} to="/blog" />
+            <Tab label="Blog" LinkComponent={Link} to="/blogs" />
             <Tab label="Reports" LinkComponent={Link} to="/reports" />
           </Tabs>
         </Box>
