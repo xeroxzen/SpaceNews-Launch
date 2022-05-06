@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Blog from "../components/Blog";
+import { Grid, Box } from "@mui/material";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -20,14 +21,25 @@ const Blogs = () => {
     <div>
       {blogs &&
         blogs.map((blog, index) => (
-          <Blog
-            key={index}
-            title={blog.title}
-            summary={blog.summary}
-            newsSite={blog.newsSite}
-            url={blog.url}
-            imageUrl={blog.imageUrl}
-          />
+          <Box
+            sx={{
+              flexGrow: 1,
+            }}
+          >
+            <Grid container spacing={2}>
+              <Grid item sm={12} md={8} xs={4}>
+                <Blog
+                  key={index}
+                  title={blog.title}
+                  summary={blog.summary}
+                  newsSite={blog.newsSite}
+                  url={blog.url}
+                  imageUrl={blog.imageUrl}
+                  publishedAt={blog.publishedAt}
+                />
+              </Grid>
+            </Grid>
+          </Box>
         ))}
     </div>
   );

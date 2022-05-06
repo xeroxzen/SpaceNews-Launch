@@ -63,7 +63,6 @@ const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
             color="textSecondary"
             component="p"
           >
-            {/* Output the date in human readable form */}
             {new Date(publishedAt).toLocaleDateString("en-US", {
               month: "short",
               day: "numeric",
