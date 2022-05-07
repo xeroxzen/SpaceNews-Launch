@@ -12,7 +12,7 @@ const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
     <div>
       <Card
         sx={{
-          width: "88%", //765 laptop screen
+          width: "90%", //765 laptop screen
           margin: "auto",
           background: "#000000BF",
           color: "#fff",
