@@ -27,7 +27,7 @@ const Articles = () => {
             }}
           >
             <Grid spacing={2}>
-              <Grid item sm={12} md={8} xs={4}>
+              <Grid item xs={4}>
                 <Article
                   key={index}
                   title={article.title}
