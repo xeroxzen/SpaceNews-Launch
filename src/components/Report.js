@@ -48,7 +48,7 @@ const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
 
 
 const Container = styled.div`
-display flex;
+display: flex;
 width: 90%;
 height: 40vh;
 background-color: white;
