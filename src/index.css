@@ -6,9 +6,5 @@
 }
 
 body {
-  background-image: url("https://www.universetoday.com/wp-content/uploads/2017/10/IMG_4978_1c_SpaceX-SES-11_Ken-Kremer-1280x720.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  margin: 1rem;
 }

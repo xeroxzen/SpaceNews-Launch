@@ -1,17 +1,23 @@
 import React from "react";
-import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import Reports from "./components/Reports";
 import Articles from "./components/Articles";
 import Blogs from "./components/Blogs";
+import LeftNav from "./components/LeftNav";
+
+
+
+
+
+import './App.css'
 
 function App() {
   return (
-    <React.Fragment>
-      <header>
-        {/* <Header /> */}
-        <Header />
-      </header>
+    <div className="Container">
+      <div className="left">
+        <LeftNav /> 
+      </div>
+
       <main>
         <Routes>
           <Route path="/" element={<Articles />} />
@@ -19,7 +25,8 @@ function App() {
           <Route path="/reports" element={<Reports />} />
         </Routes>
       </main>
-    </React.Fragment>
+
+    </div>
   );
 }
 

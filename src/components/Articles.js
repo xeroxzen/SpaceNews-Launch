@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Article from "../components/Article";
-import { Box, Grid } from "@mui/material";
+import styled from "styled-components";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -18,17 +18,12 @@ const Articles = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
+    
       {articles &&
         articles.map((article, index) => (
-          <Box
-            sx={{
-              flexGrow: 1,
-            }}
-          >
-            <Grid spacing={2}>
-              <Grid item xs={4}>
-                <Article
+          <div>
+            <Article
                   key={index}
                   title={article.title}
                   summary={article.summary}
@@ -37,12 +32,16 @@ const Articles = () => {
                   imageUrl={article.imageUrl}
                   publishedAt={article.publishedAt}
                 />
-              </Grid>
-            </Grid>
-          </Box>
+          </div>             
         ))}
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+`
 
 export default Articles;

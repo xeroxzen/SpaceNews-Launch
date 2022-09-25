@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Blog from "../components/Blog";
-import { Grid, Box } from "@mui/material";
+import styled from "styled-components";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -18,17 +18,11 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
       {blogs &&
         blogs.map((blog, index) => (
-          <Box
-            sx={{
-              flexGrow: 1,
-            }}
-          >
-            <Grid spacing={2}>
-              <Grid item sm={12} md={8} xs={4}>
-                <Blog
+          <div>
+            <Blog
                   key={index}
                   title={blog.title}
                   summary={blog.summary}
@@ -37,12 +31,16 @@ const Blogs = () => {
                   imageUrl={blog.imageUrl}
                   publishedAt={blog.publishedAt}
                 />
-              </Grid>
-            </Grid>
-          </Box>
+          </div>
         ))}
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+`
 
 export default Blogs;

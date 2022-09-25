@@ -1,0 +1,17 @@
+.Container{
+    
+}
+main{
+    margin-left: 20rem;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 10vw;
+    border-right: 1px solid blue;
+    position: fixed;
+  
+}
