@@ -14,6 +14,10 @@ const style = {
 
 }
 
+const LinkStyle = {
+  color: "blue",
+  textDecoration: "none",
+}
 
 const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
   return(
@@ -35,7 +39,7 @@ const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
         <FavoriteBorder style={style}  /> 
 
         <Btn>
-          <a href={url}>Read more</a>
+          <a href={url}  style={LinkStyle} >Read more</a>
         </Btn>
 
         <BookBookmark style={style}  /> 

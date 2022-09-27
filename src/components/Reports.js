@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Report from "./Report";
-import { Grid, Box } from "@mui/material";
+import styled from "styled-components";
+
 
 const Reports = () => {
   const [reports, setReports] = useState([]);
@@ -23,31 +24,61 @@ const Reports = () => {
   
 
   return (
-    <div>
-      {reports &&
-        reports.map((report, index) => (
-          <Box
-            sx={{
-              flexGrow: 1,
-            }}
-          >
-            <Grid spacing={2}>
-              <Grid item sm={12} md={8} xs={4}>
-                <Report
-                  key={index}
-                  title={report.title}
-                  summary={report.summary}
-                  newsSite={report.newsSite}
-                  url={report.url}
-                  imageUrl={report.imageUrl}
-                  publishedAt={report.publishedAt}
-                />
-              </Grid>
-            </Grid>
-          </Box>
-        ))}
-    </div>
+    <Container>
+        <Banner>
+          <BannerHeader>Reports</BannerHeader>
+          <BannerParagraph>Space stations and other missions often publish their data.</BannerParagraph>
+        </Banner>
+      <ReportContainer>
+        {reports &&
+          reports.map((report, index) => (
+                  <Report
+                    key={index}
+                    title={report.title}
+                    summary={report.summary}
+                    newsSite={report.newsSite}
+                    url={report.url}
+                    imageUrl={report.imageUrl}
+                    publishedAt={report.publishedAt}
+                  />
+          ))}
+    </ReportContainer>
+    </Container>
+   
   );
 };
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const Banner = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 7rem;
+  background-color: blue;
+`
+const BannerHeader = styled.h1`
+  font-size: 3rem;
+  font-family: 'Play', sans-serif;
+  letter-spacing: .5rem;
+  margin-bottom: 1rem;
+
+`
+const BannerParagraph = styled.p`
+  font-size: 1.5rem;
+  font-family: 'Play', sans-serif;
+  margin-bottom: 1rem;
+
+`
+const ReportContainer = styled.div`
+
+
+`
+
 
 export default Reports;

@@ -7,10 +7,7 @@ import { Article } from '@styled-icons/remix-line/Article'
 import { Blog } from '@styled-icons/fa-solid/Blog'
 import { DocumentReport } from '@styled-icons/heroicons-outline/DocumentReport'
 import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder'
-import { BookBookmark } from '@styled-icons/boxicons-regular/BookBookmark'
-import { FacebookWithCircle } from '@styled-icons/entypo-social/FacebookWithCircle'
-import { TwitterWithCircle } from '@styled-icons/entypo-social/TwitterWithCircle'
-import { InstagramWithCircle  } from '@styled-icons/entypo-social/InstagramWithCircle'
+
 
 
 
@@ -25,23 +22,28 @@ const NavLinks = {
     border: "4px solid black",
 }
 
+const LinkStyle = {
+    color: "blue",
+    textDecoration: "none",
+}
 
 const LeftNav = () => {
   return (
     <Container>
         <Logo>
-            <Link to='/'>SpaceNews </Link> 
+            <Link to='/'  style={LinkStyle}>SpaceNews </Link> 
         </Logo>
         <Links>
             <Link to ='/'> <Article style={NavLinks} /> </Link>
             <Link to='Blogs'> <Blog style={NavLinks} /> </Link>
             <Link to='/Reports'> <DocumentReport style={NavLinks} /> </Link>
             <Link to='/'> <FavoriteBorder style={NavLinks}  /> </Link>
-            <Link to='/'> <FavoriteBorder style={NavLinks}  /> </Link>
         </Links>
 
         <SocialMedia>
-
+            <Btn>Log In</Btn>
+            <Btn>Sign Up</Btn>
+       
         </SocialMedia>
 
 
@@ -75,7 +77,22 @@ const Links = styled.div`
 `
 
 const SocialMedia = styled.div`
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+`
+const Btn = styled.button`
+
+    background-color: whitesmoke;
+    color: blue;
+    border: 4px solid black;
+    margin-bottom: 1.5rem;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1rem;
+    font-family: 'Play', sans-serif;
 
 `
 
