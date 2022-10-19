@@ -72,7 +72,7 @@ const BannerParagraph = styled.p`
 `
 const BlogContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 
 `
 

@@ -27,9 +27,11 @@ const LinkStyle = {
     textDecoration: "none",
 }
 
+
+
 const LeftNav = () => {
   return (
-    <Container>
+    <Container >
         <Logo>
             <Link to='/'  style={LinkStyle}>SpaceNews </Link> 
         </Logo>
@@ -58,6 +60,8 @@ const Container = styled.div`
     flex-direction: column;
     height: 100%;
     width: 100%;
+
+    
     
 `
 const Logo = styled.h1`
