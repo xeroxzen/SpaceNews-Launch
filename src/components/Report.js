@@ -96,16 +96,12 @@ padding: 16px 32px;
 
 
 const Image = styled.img`
-opacity: 1;
 display: block;
 width: 100%;
 height: 100%;
 transition: .5s ease;
 backface-visibility: hidden;
 
-:hover{
-  opacity: 0.3;
-}
 `
 const Title = styled.h1`
 font-size: 1rem;

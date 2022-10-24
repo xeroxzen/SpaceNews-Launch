@@ -75,37 +75,19 @@ word-spacing: 5px;
 
 `
 const CenterInformation = styled.div`
-position: relative;
-`
-const HoverDetails = styled.div`
-transition: .5s ease;
-opacity: 0;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
-color: white;
-font-size: 16px;
-padding: 16px 32px;
 
-:hover{
-  opacity: 1;
-}
+
 `
 
 
 const Image = styled.img`
-opacity: 1;
+
 display: block;
 width: 100%;
 height: 30vh;
 transition: .5s ease;
 backface-visibility: hidden;
 
-:hover{
-  opacity: 0.3;
-}
 `
 const Title = styled.h1`
 font-size: 1rem;
