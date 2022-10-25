@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
-
 import { Link } from 'react-router-dom'
-
+import { MediaQuiries } from "./MediaQuiries";
 
 import { Article } from '@styled-icons/remix-line/Article'
 import { Blog } from '@styled-icons/fa-solid/Blog'
 import { DocumentReport } from '@styled-icons/heroicons-outline/DocumentReport'
-import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaTimes } from 'react-icons/fa';
 
@@ -26,30 +24,38 @@ const Navigation = () => {
         width: "2rem",
         border: "4px solid black",
     }
+    
+    const LinkStyle = {
+        color: "blue",
+        textDecoration: "none",
+    }
 
 
     return (
         <Container>
             <nav className={`navbar`}>
+
                 <ul className={`nav-menu ${showMenu && "active"}`}>
                     <li><Link to ='/'> <Article style={NavLinks} /> </Link> Articles</li>
                     <li><Link to='Blogs'> <Blog style={NavLinks} /> </Link> Blogs</li>
                     <li><Link to='/Reports'> <DocumentReport style={NavLinks} /> </Link> Reports</li>
-                    <li><Link to='/'> <FavoriteBorder style={NavLinks}  /> </Link> Favourites</li>
                 </ul>
 
                 <Btn onClick={() => setShowMenu(!showMenu)}>
                     {showMenu ? (<FaTimes className="icons"/>) : (<GiHamburgerMenu className="icons"/>)}
                 </Btn>
             </nav>
-            
+
+            <Logo>
+                <Link to='/'  style={LinkStyle}>SpaceNews </Link> 
+            </Logo>
         </Container>
     )
     }
 
 const Container = styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background-color: whitesmoke;
     height: 10vh;
@@ -69,6 +75,11 @@ const Container = styled.div`
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+        
+        @media ${MediaQuiries.mobileS} {
+                width: 15rem;   
+            }
 }
         .nav-menu.active {
             left: 0;
@@ -91,6 +102,14 @@ const Container = styled.div`
             border-bottom: 1px solid black;
             color: blue;
         }
+`
+const Logo = styled.h1`
+    display: flex;
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    border: 3px solid blue;
+    color: blue;
 `
 const Btn = styled.button`
     margin-left: 2rem;

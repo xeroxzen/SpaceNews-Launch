@@ -3,6 +3,8 @@ import axios from "axios";
 import Blog from "../components/Blog";
 import styled from "styled-components";
 
+import { MediaQuiries } from "./MediaQuiries";
+
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
@@ -56,6 +58,11 @@ const Banner = styled.div`
   width: 100%;
   height: 7rem;
   background-color: blue;
+
+  @media ${MediaQuiries.mobileS} {
+                height: 10rem;
+                padding-left: 2rem;
+            }
 `
 const BannerHeader = styled.h1`
   font-size: 3rem;

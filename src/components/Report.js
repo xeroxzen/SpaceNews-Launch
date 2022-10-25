@@ -1,38 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import { BookBookmark } from '@styled-icons/boxicons-regular/BookBookmark'
-import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder'
-
-const style = { 
-  backgroundColor: "whitesmoke" ,
-  color: "black",
-  padding: "2rem",
-  margin: "1rem",
-  width: "2rem",
-  border: "4px solid black",
-
-}
-
 const LinkStyle = {
   color: "blue",
   textDecoration: "none",
 }
 
 
-const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
+const Article = ({ newsSite, summary, url, imageUrl }) => {
   return (
     <Container>
-
-      <Banner>
-        <Image src={imageUrl} alt="" />
-
-        <HoverDetails>
-            <FavoriteBorder style={style}  /> 
-            <BookBookmark style={style}  /> 
-        </HoverDetails>
-    </Banner>
-
     <Information>
       <TopInformation>
         <NewSite>{newsSite}</NewSite>
@@ -72,48 +49,6 @@ letter-spacing: 4px;
 word-spacing: 5px;
 
 `
-
-const Banner = styled.div`
-width: 100%;;
-position: relative;
-`
-const HoverDetails = styled.div`
-transition: .5s ease;
-opacity: 0;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
-color: white;
-font-size: 16px;
-padding: 16px 32px;
-
-:hover{
-  opacity: 1;
-}
-`
-
-
-const Image = styled.img`
-display: block;
-width: 100%;
-height: 100%;
-transition: .5s ease;
-backface-visibility: hidden;
-
-`
-const Title = styled.h1`
-font-size: 1rem;
-color: gold;
-
-`
-const PublishedAt = styled.p`
-font-size: 1rem;
-color: gold;
-
-`
-
 const BottomInformation = styled.div`
 display: flex;
 justify-content: center;

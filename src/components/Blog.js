@@ -1,25 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import { BookBookmark } from '@styled-icons/boxicons-regular/BookBookmark'
-import { FavoriteBorder } from '@styled-icons/material/FavoriteBorder'
-
-const style = { 
-  backgroundColor: "whitesmoke" ,
-  color: "black",
-  padding: "1.2rem",
-  margin: "1rem",
-  width: "2rem",
-  border: "4px solid black",
-
-}
-
 const LinkStyle = {
   color: "blue",
   textDecoration: "none",
 }
 
-const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
+const Article = ({newsSite, summary, url, imageUrl}) => {
   return(
     <Container>
 
@@ -36,13 +23,9 @@ const Article = ({ title, newsSite, summary, url, imageUrl, publishedAt }) => {
       <Summary>{`${summary.substring( 0, 150 )}...`}</Summary>
 
       <SubBottom>
-        <FavoriteBorder style={style}  /> 
-
         <Btn>
           <a href={url}  style={LinkStyle} >Read more</a>
         </Btn>
-
-        <BookBookmark style={style}  /> 
       </SubBottom>
     </BottomInformation>
     
@@ -87,16 +70,6 @@ width: 100%;
 height: 30vh;
 transition: .5s ease;
 backface-visibility: hidden;
-
-`
-const Title = styled.h1`
-font-size: 1rem;
-color: gold;
-
-`
-const PublishedAt = styled.p`
-font-size: 1rem;
-color: gold;
 
 `
 
@@ -144,7 +117,7 @@ margin-top: 1.5rem;
 `
 const SubBottom = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 100%;

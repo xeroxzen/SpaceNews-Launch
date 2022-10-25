@@ -1,23 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-
-
-const style = { 
-  backgroundColor: "whitesmoke" ,
-  color: "black",
-  padding: "2rem",
-  margin: "1rem",
-  width: "2rem",
-  border: "4px solid black",
-
-}
 const LinkStyle = {
   color: "blue",
   textDecoration: "none",
 }
 
-const Article = ({title, newsSite, summary, url, imageUrl, publishedAt}) => {
+const Article = ({ newsSite, summary, url, imageUrl}) => {
   return (
     <Container>
 
@@ -45,8 +34,8 @@ const Article = ({title, newsSite, summary, url, imageUrl, publishedAt}) => {
 
 
 const Container = styled.div`
- width: 80%;
- height: 60vh;
+  width: 80%;
+  height: 60vh;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
@@ -80,16 +69,6 @@ const Image = styled.img`
   transition: .5s ease;
   backface-visibility: hidden;
 
-
-`
-const Title = styled.h1`
-  font-size: 1rem;
-  color: gold;
-
-`
-const PublishedAt = styled.p`
-  font-size: 1rem;
-  color: gold;
 
 `
 
