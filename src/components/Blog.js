@@ -24,7 +24,7 @@ const Article = ({newsSite, summary, url, imageUrl}) => {
 
       <SubBottom>
         <Btn>
-          <a href={url}  style={LinkStyle} >Read more</a>
+          <a href={url} target="_blank" rel="noopener noreferrer"  style={LinkStyle} >Read more</a>
         </Btn>
       </SubBottom>
     </BottomInformation>

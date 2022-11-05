@@ -10,22 +10,27 @@ const LinkStyle = {
 const Article = ({ newsSite, summary, url, imageUrl }) => {
   return (
     <Container>
-    <Information>
-      <TopInformation>
-        <NewSite>{newsSite}</NewSite>
-      </TopInformation>
+      <Information>
+        <TopInformation>
+          <NewSite>{newsSite}</NewSite>
+        </TopInformation>
 
-      <BottomInformation>
-        <Summary>{`${summary.substring( 0, 250 )}...`}</Summary>
-        <Btn>
-          <a href={url}   style={LinkStyle}>Read more</a>
+        <BottomInformation>
+          <Summary>{`${summary.substring(0, 250)}...`}</Summary>
+          <Btn>
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={LinkStyle}
+            >
+              Read more
+            </a>
           </Btn>
-      </BottomInformation>
-    </Information>
-
-
-  </Container>
-);
+        </BottomInformation>
+      </Information>
+    </Container>
+  );
 };
 
 
