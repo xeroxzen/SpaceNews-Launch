@@ -1,5 +1,5 @@
 # Name: **Makhosetive Sibanda**
-## Speciality: **FrontEnd Developer**
+## Speciality: **FrontEnd Developer** :technologist:
 ## Project Title: **SpaceNews Launch**
 ---------------------------------------------------------------------------------------------------------------------------------------------
 # Project Tools
