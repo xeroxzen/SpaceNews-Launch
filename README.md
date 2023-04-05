@@ -31,6 +31,9 @@ Space stations and other missions often publish their data. With SNAPI, you can 
 # Key lesson Learnt From Building this Project
 
 + React router dom
++ React Hooks
+-useState Hook
+-useEffect Hook
 + styling components using styled components 
 + Fetching Data using Async and Wait
 
