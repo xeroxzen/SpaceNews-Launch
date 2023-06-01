@@ -1,12 +1,5 @@
 # Name: **Makhosetive Sibanda**
-## Speciality: **FrontEnd Developer** :technologist:
 ## Project Title: **SpaceNews Launch** :rocket:
----------------------------------------------------------------------------------------------------------------------------------------------
-# Project Tools
-+ ReactJS
-+ Styled components
-+ React icons
-+ React router Dom
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Project Description 
 
@@ -36,6 +29,8 @@ Space stations and other missions often publish their data. With SNAPI, you can 
 -useEffect Hook
 + styling components using styled components 
 + Fetching Data using Async and Wait
-
++ Styled Components
++ Responsiveness of Web pages
++ Api calls using AXIOS
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
