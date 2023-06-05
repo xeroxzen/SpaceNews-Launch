@@ -3,34 +3,32 @@
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Project Description 
 
-This is Space News Launch web site. It's created using React Js. the web page is for space enthusiest as it broadcasts latest space news published from different web sites. it uses an appliation programming interface (API) called **Spaceflight News API** (https://www.spaceflightnewsapi.net/).
+This SpaceNews Launch Web App was built using ReactJS to create a user-friendly platform for users to stay updated on the latest news related to space exploration. The app fetches news articles from the Spaceflight News API and displays them in a clean and responsive design, making it easy for users to access information on various space-related topics. The app features a navigation bar, news feed, and individual news items.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Key Features
 
-the web site consists of pages 
-+ Home page
-+ Articles page
-+ Blog page
-+ Report page
-
-# *Blog page*
-Blogs often provide a more detailed overview of launches and missions. A must-have for the serious spaceflight 
-
-# *Articles Page*
-Get an overview of the latest Spaceflight news, from various sources! Easily link your users to the right websites
-
-# *Report page*
-Space stations and other missions often publish their data. With SNAPI, you can include it in your app as well!
-
++ Home page: The main landing page showcasing featured news articles and recent blog posts
++ Articles page: Provides an overview of the latest spaceflight news from various sources
++ Blog page: Features detailed blog posts on spaceflight missions and related topics
++ Report page: Displays data from space stations and other missions using the Spaceflight News API
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Key lesson Learnt From Building this Project
 
-+ React router dom
-+ React Hooks
--useState Hook
--useEffect Hook
-+ styling components using styled components 
-+ Fetching Data using Async and Wait
-+ Styled Components
-+ Responsiveness of Web pages
-+ Api calls using AXIOS
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+During the development of this project, the following concepts and technologies were utilized:
 
++ React Router DOM: Handling client-side routing in React applications
++ React Hooks: Managing component state and side effects with useState and useEffect Hooks
++ Styled Components: Styling components using CSS-in-JS
++ Fetching Data using Async and Wait: Fetching data from the Spaceflight News API
++ Styled Components: A CSS-in-JS library for styling components
++ Responsiveness of Web Pages: Ensuring the app works well on various screen sizes
++ API Calls using Axios: Fetching news articles and blog posts from the Spaceflight News API
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Getting started with Space News Launch
+
+To install and run the Space News Launch Web App locally, follow these steps:
+
++ Clone the repository: git clone <your-repo-url>
++ Navigate to the project directory: cd <your-project-folder>
++ Install dependencies: npm install
++ Start the development server: npm start
